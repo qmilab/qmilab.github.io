@@ -1,0 +1,80 @@
+---
+import PublicationEntry from './PublicationEntry.astro';
+import { getCollection } from 'astro:content';
+
+const publications = (await getCollection('publications'))
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+
+// Group publications by year
+const pubsByYear = new Map<number, typeof publications>();
+for (const pub of publications) {
+  const year = pub.data.date.getFullYear();
+  if (!pubsByYear.has(year)) {
+    pubsByYear.set(year, []);
+  }
+  pubsByYear.get(year)!.push(pub);
+}
+
+// Sort years descending
+const years = [...pubsByYear.keys()].sort((a, b) => b - a);
+
+const forthcomingStatuses = new Set(['in-preparation', 'preprint', 'submitted']);
+
+function yearLabel(year: number, pubs: typeof publications): string {
+  const allForthcoming = pubs.every((p) => forthcomingStatuses.has(p.data.status));
+  return allForthcoming ? `Forthcoming — ${year}` : `${year}`;
+}
+---
+
+<section id="publications" class="section">
+  <div class="container">
+    <h2>Publications</h2>
+
+    {years.length > 0 ? (
+      years.map((year) => (
+        <div class="pub-year-group">
+          <p class="pub-year">{yearLabel(year, pubsByYear.get(year)!)}</p>
+          {pubsByYear.get(year)!.map((pub) => (
+            <PublicationEntry
+              title={pub.data.title}
+              authors={pub.data.authors}
+              pillar={pub.data.pillar}
+              status={pub.data.status}
+              venue={pub.data.venue}
+              arxiv={pub.data.arxiv}
+              code={pub.data.code}
+              abstract={pub.data.abstract}
+            />
+          ))}
+        </div>
+      ))
+    ) : (
+      <p class="pub-empty">Publications forthcoming. Check back soon.</p>
+    )}
+  </div>
+</section>
+
+<style>
+  .pub-year-group {
+    margin-bottom: var(--space-xl);
+  }
+
+  .pub-year-group:last-child {
+    margin-bottom: 0;
+  }
+
+  .pub-year {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--accent-blue);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: var(--space-sm);
+  }
+
+  .pub-empty {
+    color: var(--med-gray);
+    font-style: italic;
+  }
+</style>

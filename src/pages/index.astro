@@ -1,0 +1,85 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import PillarCard from '../components/PillarCard.astro';
+import PublicationList from '../components/PublicationList.astro';
+import CollaborateCTA from '../components/CollaborateCTA.astro';
+import '../styles/global.css';
+---
+
+<Base>
+  <Hero />
+
+  <!-- Intro -->
+  <section class="section">
+    <div class="container">
+      <p>QMI Lab investigates how machine intelligence emerges from representation, architecture, and learning dynamics. Our work spans classical machine learning, quantum machine learning, and long-horizon research on world models.</p>
+      <p>We focus on rigorous, publication-oriented research: empirical work in machine intelligence, benchmark-driven studies in quantum AI, and agenda-setting work at the frontier of quantum world models.</p>
+    </div>
+  </section>
+
+  <!-- Research Pillars -->
+  <section id="research" class="section">
+    <div class="container--wide">
+      <h2>Research</h2>
+      <p>QMI Lab organizes its work into three pillars, each with a different time horizon and evidentiary standard.</p>
+
+      <div class="pillars">
+        <PillarCard
+          number="I"
+          title="Foundations of Machine Intelligence"
+          horizon="Current · Experimental · Publish-now"
+          color="blue"
+          description="Representation, cross-lingual transfer, world-model evaluation, and learning dynamics. This is where QMI Lab builds its early publication record through empirical and reproducible work designed for present-day evaluation standards in NLP and machine learning."
+          questions={[
+            "How do architectures shape learned representations?",
+            "Can script normalization support efficient cross-lingual transfer?",
+            "What evaluation methodologies work for world models beyond next-token prediction?",
+            "What training dynamics support more transferable internal structure?",
+          ]}
+        />
+
+        <PillarCard
+          number="II"
+          title="Quantum Machine Intelligence"
+          horizon="Near-term · Benchmark-driven · Matched-resource comparisons"
+          color="purple"
+          description="Hybrid quantum-classical architectures, matched-resource benchmarking, and honest tests of quantum advantage. Every project includes strong classical baselines, explicit resource accounting, and evaluation under matched comparison conditions."
+          questions={[
+            "Do parameterized quantum circuits offer parameter efficiency in data-scarce regimes?",
+            "How do encoding strategies affect information preservation in quantum systems?",
+            "How do hybrid quantum-classical Transformer systems compare against classical alternatives?",
+            "Where do the practical limits of NISQ-era quantum ML actually lie?",
+          ]}
+        />
+
+        <PillarCard
+          number="III"
+          title="Quantum World Models"
+          horizon="Long-horizon · Conceptual + methodological"
+          color="red"
+          description="Quantum simulation, world-model structure, and evaluation in physically grounded domains. Near-term outputs are methodological and conceptual: taxonomies, evaluation frameworks, benchmark proposals, and position papers."
+          questions={[
+            "What might a quantum-native world model architecture look like?",
+            "How can quantum simulation interact with learned representations?",
+            "How should quantum-state world models be evaluated?",
+            "In which specific domains might quantum world models offer advantages?",
+          ]}
+        />
+      </div>
+    </div>
+  </section>
+
+  <!-- Publications -->
+  <PublicationList />
+
+  <!-- Collaborate -->
+  <CollaborateCTA />
+</Base>
+
+<style>
+  .pillars {
+    margin-top: var(--space-xl);
+  }
+
+</style>

@@ -1,0 +1,405 @@
+---
+import Base from '../layouts/Base.astro';
+import '../styles/global.css';
+---
+
+<Base title="Research Manifesto — QMI Lab" description="The full research manifesto of QMI Lab (Quantum & Machine Intelligence Laboratory). Understanding intelligence across classical and quantum computation.">
+  <article class="manifesto">
+    <div class="container">
+
+      <a href="/" class="manifesto__back">← Back to main site</a>
+
+      <header class="manifesto__header">
+        <h1>QMI Lab</h1>
+        <p class="manifesto__subtitle">Quantum & Machine Intelligence Laboratory</p>
+        <p class="manifesto__doc-title">Research Manifesto</p>
+        <p class="manifesto__epigraph">
+          Understanding intelligence. From information to knowledge.<br />
+          From classical to quantum. From approximation to reality.
+        </p>
+        <p class="manifesto__version">v3.0 — March 2026</p>
+      </header>
+
+      <hr class="divider" />
+
+      <!-- THE FOUNDING QUESTION -->
+      <section class="manifesto__section">
+        <h2>The Founding Question</h2>
+
+        <p><strong>How does information become knowledge? And how do we build machines that genuinely understand — not merely predict?</strong></p>
+
+        <p>These two questions, one philosophical and one engineering, are the reason QMI Lab exists. They are deceptively simple. The history of artificial intelligence is, in many ways, a history of mistaking progress on the second question for progress on the first.</p>
+
+        <p>Modern AI systems — large language models, vision transformers, multimodal architectures — are extraordinary pattern recognizers. They compress the statistical structure of enormous datasets into parameter spaces and produce outputs that are often indistinguishable from genuine understanding. But they primarily learn statistical structure in observations rather than the full causal or physical processes that generate those observations. They build representations of the world in words and pixels — representations that work remarkably well for many tasks, yet may remain structurally limited in domains where the underlying dynamics are irreducibly quantum.</p>
+
+        <p>QMI Lab is founded on the conviction that closing this gap requires two things working in concert:</p>
+
+        <p><strong>First, deeper foundational research into the nature of machine intelligence itself</strong> — how architectures shape what can be learned, how representations constrain what can be understood, how information diffuses and crystallizes into knowledge across languages, modalities, and domains. Much of this research is classical, and valuably so. Understanding what classical methods can and cannot do is prerequisite to knowing where quantum approaches are needed.</p>
+
+        <p><strong>Second, the computational substrate that matches reality's information processing in domains where classical methods reach fundamental limits</strong> — quantum computation. The state space of a 300-qubit system grows exponentially, far beyond what can be tractably enumerated classically. Classical simulation of quantum phenomena scales exponentially in cost. For problems in molecular dynamics, many-body physics, materials science, and quantum chemistry, faithful simulation may ultimately require quantum hardware.</p>
+
+        <p>These are not separate research programs. They are one program viewed from two directions. QMI Lab pursues both — with the understanding that the boundary between "classical is sufficient" and "quantum is necessary" is itself a research question, not a settled fact.</p>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- WHAT WE BELIEVE -->
+      <section class="manifesto__section">
+        <h2>What We Believe</h2>
+
+        <p><strong>Knowledge is probabilistic and emergent.</strong> Information does not become knowledge through accumulation alone. It diffuses, interacts, and crystallizes into structured understanding through processes we do not yet fully characterize. Whether architectures like Transformers learn transferable, model-like abstractions or primarily compress statistical regularities remains an open and consequential question. Resolving it is prerequisite to building machines that understand.</p>
+
+        <p><strong>Architecture is not neutral.</strong> The choice of computational architecture — Transformer, recurrent, graph, quantum circuit — is not merely an engineering decision. It determines what can be represented, what can be learned, and what remains invisible. The right architecture for a problem depends on the structure of the problem. For certain problem classes, quantum architectures may offer structural advantages that no classical architecture can replicate — but this claim must be demonstrated empirically, not assumed.</p>
+
+        <p><strong>Classical and quantum research must co-evolve.</strong> Quantum machine intelligence cannot be built on weak classical foundations. Advancing QML without deeply understanding classical ML produces hype, not science. Equally, pursuing classical AI without investigating the fundamental limitations of classical computation for certain problem classes may leave important capabilities on the table. Both directions of research are essential, and they inform each other.</p>
+
+        <p><strong>World models are a powerful abstraction, and some may require quantum.</strong> A growing line of research suggests that building models of latent world dynamics — not just models of language, vision, or action in isolation — may be a promising path toward more general intelligence. Classical world models are sufficient for many practical regimes. But for domains where the underlying dynamics are irreducibly quantum — molecular behavior, quantum materials, many-body systems — faithful simulation may require quantum computation. The question of which domains genuinely need quantum world models, and where classical approximations remain adequate, is itself a central research question for QMI Lab.</p>
+
+        <p><strong>Curiosity and experimentation lead to discovery.</strong> QMI Lab is not organized around a single bet or a single timeline. It is organized around questions. Some will lead to publications. Some will lead to commercial applications. Some will lead to new questions. The commitment is to intellectual honesty, rigorous methodology, and the patience to follow research where it leads — including into dead ends, which are themselves informative.</p>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- THREE PILLARS -->
+      <section class="manifesto__section">
+        <h2>Three Pillars of Research</h2>
+
+        <p>QMI Lab's research is organized into three pillars. They are not isolated programs — they interact, share methodology, and inform each other. A discovery in one pillar frequently opens questions in another.</p>
+
+        <p>Each pillar operates on a different time horizon and holds itself to a different evidentiary standard. This is deliberate: a lab that tries to do everything at the same pace does nothing well.</p>
+
+        <h3 class="pillar-heading pillar-heading--1">Pillar I: Foundations of Machine Intelligence</h3>
+        <p class="pillar-horizon">Time horizon: Current · Standard: Experimental, publish-now</p>
+
+        <p>How do architectures shape what can be learned? How does information diffuse into knowledge? What are the representational bottlenecks in current systems? This pillar investigates the classical foundations of machine intelligence — NLP, deep learning, computer vision, physical AI — with emphasis on representation, cross-lingual transfer, and the nature of learned knowledge. Not every project here has a quantum endpoint. Some of the most important questions in intelligence are not quantum questions at all.</p>
+
+        <p><em>This is the pillar where QMI Lab builds its early publication record and establishes immediate credibility. The work here is empirical, reproducible, and designed for present-day evaluation standards in NLP and machine learning.</em></p>
+
+        <p><strong>Core Questions:</strong></p>
+        <ul class="question-list">
+          <li>Does romanization reveal a shared probabilistic learning space across languages, or does script normalization destroy information that matters?</li>
+          <li>How do Transformer architectures shape the knowledge they encode? Is there a fundamental representational bottleneck?</li>
+          <li>Can cross-lingual transfer from English LLMs be achieved cheaply through script normalization, and how does this vary with language typology?</li>
+          <li>What evaluation methodologies are needed for world models that go beyond next-token prediction?</li>
+          <li>What training dynamics, representational transitions, or architectural bottlenecks mark the transition from memorization to more transferable internal structure in neural networks?</li>
+        </ul>
+
+        <h3 class="pillar-heading pillar-heading--2">Pillar II: Quantum Machine Intelligence</h3>
+        <p class="pillar-horizon">Time horizon: Near-term · Standard: Benchmark-driven, matched-resource comparisons</p>
+
+        <p>Where and why do quantum approaches offer genuine advantages for machine learning and AI? This pillar bridges classical AI and quantum computation, investigating hybrid quantum-classical architectures, quantum deep learning, and honest benchmarking of quantum vs. classical methods. The commitment is to scientific rigor: quantum methods must earn their place through fair, explicit, and empirically demonstrated advantage — not assumed superiority.</p>
+
+        <p><em>Every project in this pillar includes strong classical baselines, explicit resource accounting, and evaluation under matched comparison conditions. This is the methodological standard the field increasingly demands, and QMI Lab intends to meet it from the outset.</em></p>
+
+        <p><strong>Core Questions:</strong></p>
+        <ul class="question-list">
+          <li>Can parameterized quantum circuits provide genuine parameter efficiency in data-scarce regimes, or do classical methods always catch up?</li>
+          <li>What encoding strategies (amplitude, angle, basis, IQP) best preserve the information structure of NLP data in quantum systems?</li>
+          <li>How do hybrid quantum-classical Transformer architectures compare to fully classical models under matched resource budgets?</li>
+          <li>What are the practical limits of quantum machine learning on NISQ hardware, and where does the transition to advantage occur?</li>
+          <li>Can quantum-inspired classical methods capture some benefits of quantum approaches without quantum hardware?</li>
+        </ul>
+
+        <h3 class="pillar-heading pillar-heading--3">Pillar III: Quantum World Models</h3>
+        <p class="pillar-horizon">Time horizon: Long-horizon · Standard: Agenda-setting, conceptual, and exploratory</p>
+
+        <p>Can quantum computation enable classes of world models that capture dynamics or state structure that are intractable, lossy, or fundamentally difficult to represent classically? This is the longest-horizon, most ambitious pillar — the convergence of world model research, quantum simulation, and machine intelligence. Classical world models are sufficient for many practical regimes. But for domains where the underlying dynamics are irreducibly quantum, faithful simulation may require quantum hardware. This pillar investigates that frontier — carefully, with honest acknowledgment of what is currently speculative and what is empirically grounded.</p>
+
+        <p><em>The near-term output of this pillar is primarily methodological and conceptual: position papers, taxonomies, evaluation frameworks, benchmark proposals for physically grounded domains, and careful delineation of where quantum world models might offer genuine capabilities beyond classical approaches. Experimental validation will follow as quantum hardware and hybrid methods mature.</em></p>
+
+        <p><strong>Core Questions:</strong></p>
+        <ul class="question-list">
+          <li>What would a quantum-native world model architecture look like? How does it differ structurally from classical world models?</li>
+          <li>Can quantum simulation of physical systems be integrated with learned representations to create hybrid world models?</li>
+          <li>What is the minimal quantum resource required to achieve world model capabilities that are provably impossible classically?</li>
+          <li>How do we evaluate world models that operate on quantum state spaces rather than classical observations?</li>
+          <li>In which specific domains do quantum world models offer genuine advantages over classical approaches, and where do classical approximations remain adequate?</li>
+        </ul>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- LARGER SCOPE -->
+      <section class="manifesto__section">
+        <h2>The Larger Scope</h2>
+
+        <p>QMI Lab studies intelligence, learning, and representation across classical and quantum computational substrates. This scope is deliberately broader than quantum machine learning alone.</p>
+
+        <p>Fundamental research in classical ML, deep learning, NLP, computer vision, and physical AI is as important to QMI Lab's mission as quantum approaches. The reason is simple: you cannot know where quantum helps unless you deeply understand where classical methods succeed, fail, and reach their limits. And some of the most important questions about intelligence — how information becomes knowledge, how representations shape understanding, how learning dynamics unfold — are questions that exist independent of the computational substrate.</p>
+
+        <p>Equally, QMI Lab is not constrained to QML and QDL narrowly construed. Quantum computing, quantum simulation, and quantum-information-theoretic methods may all prove relevant to intelligence research in ways we do not yet fully understand. The lab's commitment is to follow the questions, not to defend a predetermined technological boundary.</p>
+
+        <p>This breadth is intentional but disciplined. Each pillar has a clear time horizon and evidentiary standard. The lab publishes in Pillar I now, benchmarks rigorously in Pillar II, and sets agendas carefully in Pillar III. Breadth without depth is superficiality. QMI Lab earns its breadth through the quality of its work in each pillar.</p>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- RELATIONSHIP TO QUANTPUTATION -->
+      <section class="manifesto__section">
+        <h2>Relationship to Quantputation</h2>
+
+        <p>QMI Lab and Quantputation share a founder and a conviction: that quantum computation will matter deeply in some domains of modeling, simulation, and intelligence. They serve different purposes.</p>
+
+        <p><strong>Quantputation</strong> is a commercial company. Its mission is to make quantum technologies accessible, affordable, and portable. Its first product, QubitHub, is a developer infrastructure platform. Quantputation ships products, serves customers, and builds a business. Its timeframe is quarters and years.</p>
+
+        <p><strong>QMI Lab</strong> is a research laboratory. Its mission is to understand intelligence — through both classical and quantum lenses. It publishes openly, collaborates broadly, and pursues questions wherever they lead. Its timeframe is years and decades.</p>
+
+        <p>The relationship between them is upstream/downstream. QMI Lab's research outputs flow into Quantputation when commercially relevant; Quantputation's practical challenges flow back to QMI Lab as research questions grounded in real-world usage.</p>
+
+        <p>Neither entity is a subset of the other. QMI Lab is a research organization; Quantputation is a company. They inform each other, but they serve different purposes and operate on different time horizons.</p>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- YEAR ONE -->
+      <section class="manifesto__section">
+        <h2>Year One: Publications & Credibility</h2>
+
+        <p>QMI Lab's first-year priority is establishing credibility through rigorous publications. The publication roadmap is structured to plant the flag, build momentum, and attract collaborators.</p>
+
+        <h3>Publication Targets (2026–2027)</h3>
+
+        <p><strong>ArXiv preprints:</strong> The primary vehicle for establishing QMI Lab's identity. Each preprint carries the "QMI Lab" affiliation. Goal: 3–4 preprints in Year 1.</p>
+
+        <p><strong>Workshop submissions:</strong> NeurIPS, ICLR, EMNLP, and ACL workshops. These are credibility signals and networking opportunities. Goal: 2–3 workshop submissions, with acceptance as the desired outcome.</p>
+
+        <p><strong>Full venue submissions:</strong> EACL, EMNLP, or equivalent. Longer-horizon, higher bar. Goal: 1 full-venue submission by the end of Year 1.</p>
+
+        <h3>Research Sequence</h3>
+
+        <p><strong>First (in progress):</strong> Hybrid quantum-classical Transformer fine-tuning for NLP. PennyLane + HuggingFace, PQC classification head on frozen pretrained model, SST-2 and few-shot benchmarks. This is the most advanced project and the first to carry the QMI Lab name. <em>[Pillar II — benchmark-driven]</em></p>
+
+        <p><strong>Second:</strong> Cross-lingual transfer through romanization. Five-language comparison (Japanese, Hindi, Mandarin, Korean, Vietnamese), three training conditions per language, QLoRA fine-tuning on Llama 3.1 8B. ArXiv target: mid-2026. <em>[Pillar I — experimental]</em></p>
+
+        <p><strong>Third:</strong> Quantum world models — a position paper. "Toward Quantum World Models: A Research Agenda." Establishes QMI Lab's intellectual territory in Pillar III without requiring full experimental results. Identifies specific domains where quantum world models may offer genuine advantages over classical approaches. Suitable for a NeurIPS or ICLR workshop. <em>[Pillar III — agenda-setting]</em></p>
+
+        <p><strong>Fourth:</strong> World model evaluation methodology. The evaluation gap is the highest-leverage contribution opportunity in world models research. A rigorous evaluation framework paper positions QMI Lab as a methodological contributor, not just a model builder. <em>[Pillar I / III — bridging]</em></p>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- COLLABORATION -->
+      <section class="manifesto__section">
+        <h2>Collaboration Model</h2>
+
+        <p>QMI Lab is designed for collaboration from day one. Intelligence research benefits from diverse perspectives, and the intersection of quantum computing and AI is too broad for any single researcher to cover alone.</p>
+
+        <h3>Co-Authorship & University Partnerships</h3>
+        <p>QMI Lab actively seeks co-authors from university research groups, particularly in quantum computing, NLP, and world models. The model: QMI Lab brings the research vision, experimental infrastructure, and cross-disciplinary perspective. University collaborators bring domain depth, student researchers, and institutional resources. Publications carry joint affiliations.</p>
+
+        <h3>Visiting Researchers & Affiliates</h3>
+        <p>QMI Lab offers affiliate positions to researchers who wish to contribute to specific projects without full-time commitment. Visiting researchers (including virtual visitors) can collaborate on publications, share compute resources, and participate in QMI Lab's research seminars. The affiliation is lightweight: no employment relationship, shared IP on joint work, open publication by default.</p>
+
+        <h3>Core Research Team</h3>
+        <p>As resources permit, QMI Lab intends to build a small core team of 2–3 researchers in the first 12–18 months. These would be researchers whose interests align with QMI Lab's three pillars and who bring complementary expertise — for instance, a quantum physicist with interest in ML, or an NLP researcher curious about quantum representations. The core team works on QMI Lab's primary research threads while maintaining freedom to pursue their own questions within the lab's scope.</p>
+
+        <h3>Open by Default</h3>
+        <p>QMI Lab's research is published openly. Code and data are shared whenever possible. The lab's credibility comes from the quality of its work, not from proprietary advantage. This openness is both a value and a strategy: it attracts collaborators, builds trust, and accelerates the field.</p>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- PRINCIPLES -->
+      <section class="manifesto__section">
+        <h2>Research Principles</h2>
+
+        <p><strong>1. Intellectual honesty above all.</strong> If a quantum method underperforms a classical baseline, we say so. If a research direction leads nowhere, we publish the negative result. The field needs honest benchmarks more than it needs optimistic claims. QMI Lab's reputation is built on trust, and trust is built on honesty.</p>
+
+        <p><strong>2. Rigor earns the right to speculate.</strong> Ambitious claims about quantum advantage, world models, or the nature of intelligence are only credible when supported by rigorous methodology. We earn the right to make bold claims by doing careful science. Pillar III's long-horizon ambitions are disciplined by Pillar I's empirical work and Pillar II's benchmark-driven rigor.</p>
+
+        <p><strong>3. Classical foundations before quantum aspirations.</strong> Every quantum ML project at QMI Lab includes strong classical baselines. Every claim of quantum advantage is tested against strong classical alternatives under explicitly stated comparison conditions and matched resource assumptions. This is not caution — it is the only way to know whether quantum helps.</p>
+
+        <p><strong>4. Questions over answers.</strong> The lab is organized around questions, not around technologies or techniques. A good question outlasts any particular approach to answering it. When a research thread stalls, we ask whether we are pursuing the right question, not just the right method.</p>
+
+        <p><strong>5. Breadth through depth.</strong> QMI Lab's scope is deliberately broad. But breadth without depth is superficiality. Each project is pursued with the depth required for publication-quality results. Each pillar operates on a clear time horizon with an appropriate evidentiary standard. We would rather publish two rigorous papers than five mediocre ones.</p>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- THE LONG VIEW -->
+      <section class="manifesto__section">
+        <h2>The Long View</h2>
+
+        <p>QMI Lab exists because the most important questions about intelligence cannot be answered by any single field, any single architecture, or any single computational paradigm.</p>
+
+        <p>Understanding how information becomes knowledge. Understanding how machines can move beyond surface prediction toward more structured, transferable, and model-based forms of competence. Understanding where classical computation is sufficient and where quantum computation becomes necessary. These are questions that span decades, not quarters.</p>
+
+        <p>The lab is small today. It may remain small, or it may grow. Its value is not measured in headcount or funding, but in the quality of the questions it asks and the rigor of the answers it produces.</p>
+
+        <blockquote>
+          <p>"Nature isn't classical, dammit, and if you want to make a simulation of nature, you'd better make it quantum mechanical, and by golly it's a wonderful problem, because it doesn't look so easy."</p>
+          <footer>— Richard Feynman, 1981</footer>
+        </blockquote>
+
+        <p><em>It doesn't look so easy. That's precisely why it's worth doing.</em></p>
+      </section>
+
+      <footer class="manifesto__footer">
+        <p><strong>QMI Lab</strong> — Quantum & Machine Intelligence Laboratory</p>
+        <p><a href="https://qmilab.com">qmilab.com</a></p>
+      </footer>
+
+    </div>
+  </article>
+</Base>
+
+<style>
+  .manifesto {
+    padding-bottom: var(--space-2xl);
+  }
+
+  .manifesto__back {
+    display: inline-block;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--accent-blue);
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-xl);
+  }
+
+  .manifesto__header {
+    text-align: center;
+    padding: var(--space-2xl) 0;
+  }
+
+  .manifesto__header h1 {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 500;
+    margin-bottom: var(--space-xs);
+  }
+
+  .manifesto__subtitle {
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    color: var(--accent-blue);
+    letter-spacing: 0.06em;
+    margin-bottom: var(--space-xl);
+    max-width: none;
+  }
+
+  .manifesto__doc-title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--deep-navy);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-top: 1px solid var(--border-gray);
+    border-bottom: 1px solid var(--border-gray);
+    padding: var(--space-md) var(--space-xl);
+    display: inline-block;
+    margin-bottom: var(--space-xl);
+  }
+
+  .manifesto__epigraph {
+    font-family: var(--font-heading);
+    font-style: italic;
+    color: var(--med-gray);
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: var(--space-md);
+    max-width: none;
+  }
+
+  .manifesto__version {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    color: var(--med-gray);
+    letter-spacing: 0.04em;
+    max-width: none;
+  }
+
+  .manifesto__section {
+    padding: var(--space-xl) 0;
+  }
+
+  .manifesto__section h2 {
+    margin-top: 0;
+  }
+
+  .manifesto__section p {
+    max-width: 65ch;
+    font-size: 1.0125rem;
+    line-height: 1.85;
+  }
+
+  .pillar-heading {
+    margin-top: var(--space-xl);
+    padding-left: var(--space-md);
+    border-left: 3px solid var(--med-gray);
+  }
+
+  .pillar-heading--1 { border-color: var(--pillar-1); }
+  .pillar-heading--2 { border-color: var(--pillar-2); }
+  .pillar-heading--3 { border-color: var(--pillar-3); }
+
+  .pillar-horizon {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    font-style: italic;
+    color: var(--med-gray);
+    margin-bottom: var(--space-lg);
+    letter-spacing: 0.02em;
+  }
+
+  .question-list {
+    list-style: none;
+    padding: 0;
+    padding-left: var(--space-md);
+    margin: var(--space-md) 0 var(--space-xl) 0;
+  }
+
+  .question-list li {
+    padding-left: 1.5em;
+    position: relative;
+    margin-bottom: var(--space-sm);
+    font-style: italic;
+    color: var(--med-gray);
+    line-height: 1.75;
+    font-size: 0.95rem;
+  }
+
+  .question-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--accent-blue);
+    font-style: normal;
+  }
+
+  blockquote {
+    margin: var(--space-xl) 0;
+    padding: var(--space-lg);
+    border-left: 2px solid var(--deep-navy);
+    background: none;
+  }
+
+  blockquote p {
+    margin-bottom: var(--space-sm);
+    max-width: none;
+  }
+
+  blockquote footer {
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    color: var(--med-gray);
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .manifesto__footer {
+    text-align: center;
+    padding-top: var(--space-2xl);
+    border-top: 1px solid var(--border-gray);
+    margin-top: var(--space-xl);
+  }
+
+  .manifesto__footer p {
+    max-width: none;
+    font-family: var(--font-heading);
+    font-size: 0.95rem;
+    margin-bottom: var(--space-sm);
+  }
+</style>

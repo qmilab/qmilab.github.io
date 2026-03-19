@@ -1,0 +1,172 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'QMI Lab — Quantum & Machine Intelligence Laboratory',
+  description = 'An independent research lab studying intelligence, learning, and representation across classical and quantum computation.'
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <link rel="canonical" href={Astro.url} />
+
+    <!-- Fonts: EB Garamond (headings), IBM Plex Sans (body), IBM Plex Mono (labels) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={Astro.url} />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav__inner container--wide">
+        <a href="/" class="nav__logo">QMI Lab</a>
+        <div class="nav__links">
+          <a href="/#research">Research</a>
+          <a href="/#publications">Publications</a>
+          <a href="/#collaborate">Collaborate</a>
+          <a href="/manifesto">Manifesto</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="footer__brand">
+            <strong>QMI Lab</strong>
+            <span class="footer__sep">&mdash;</span>
+            Quantum & Machine Intelligence Laboratory
+          </div>
+          <div class="footer__links">
+            <a href="mailto:hello@qmilab.com">hello@qmilab.com</a>
+            <a href="https://github.com/qmilab" target="_blank" rel="noopener">GitHub</a>
+          </div>
+          <div class="footer__note">
+            QMI Lab is an independent research organization.
+            <a href="https://quantputation.com" target="_blank" rel="noopener">Quantputation</a> is a company.
+            They share a founder and inform each other, but serve different purposes.
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <style>
+      .nav {
+        position: sticky;
+        top: 0;
+        background: var(--white);
+        border-bottom: 1px solid var(--border-gray);
+        z-index: 100;
+        padding: var(--space-md) 0;
+      }
+
+      .nav__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .nav__logo {
+        font-family: var(--font-heading);
+        font-weight: 600;
+        font-size: 1.15rem;
+        color: var(--deep-navy);
+        text-decoration: none;
+        letter-spacing: 0.01em;
+      }
+
+      .nav__logo:hover {
+        text-decoration: none;
+        color: var(--deep-navy);
+      }
+
+      .nav__links {
+        display: flex;
+        gap: var(--space-lg);
+      }
+
+      .nav__links a {
+        font-family: var(--font-mono);
+        font-size: 0.78rem;
+        font-weight: 400;
+        color: var(--med-gray);
+        text-decoration: none;
+        letter-spacing: 0.03em;
+        text-transform: lowercase;
+      }
+
+      .nav__links a:hover {
+        color: var(--deep-navy);
+        text-decoration: none;
+      }
+
+      .footer {
+        margin-top: var(--space-2xl);
+        padding: var(--space-xl) 0;
+        border-top: 1px solid var(--border-gray);
+      }
+
+      .footer__inner {
+        display: flex;
+        flex-direction: column;
+        gap: var(--space-md);
+      }
+
+      .footer__brand {
+        font-family: var(--font-heading);
+        font-size: 0.95rem;
+        color: var(--deep-navy);
+      }
+
+      .footer__sep {
+        color: var(--border-gray);
+        margin: 0 0.25em;
+      }
+
+      .footer__links {
+        display: flex;
+        gap: var(--space-lg);
+        font-family: var(--font-mono);
+        font-size: 0.8rem;
+      }
+
+      .footer__note {
+        font-size: 0.8rem;
+        color: var(--med-gray);
+        max-width: 50ch;
+        line-height: 1.6;
+      }
+
+      @media (max-width: 768px) {
+        .nav__links {
+          gap: var(--space-md);
+        }
+
+        .nav__links a {
+          font-size: 0.72rem;
+        }
+      }
+    </style>
+  </body>
+</html>

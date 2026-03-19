@@ -1,0 +1,124 @@
+---
+interface Props {
+  number: string;
+  title: string;
+  horizon: string;
+  color: 'blue' | 'purple' | 'red';
+  description: string;
+  questions: string[];
+}
+
+const { number, title, horizon, color, description, questions } = Astro.props;
+
+const colorMap = {
+  blue: 'var(--pillar-1)',
+  purple: 'var(--pillar-2)',
+  red: 'var(--pillar-3)',
+};
+---
+
+<div class="pillar" style={`--pillar-color: ${colorMap[color]}`}>
+  <div class="pillar__header">
+    <span class="pillar__number">Pillar {number}</span>
+    <h3 class="pillar__title">{title}</h3>
+    <span class="pillar__horizon">{horizon}</span>
+  </div>
+  <div class="pillar__body">
+    <p class="pillar__description">{description}</p>
+    <div class="pillar__questions">
+      <span class="pillar__questions-label">Representative questions</span>
+      <ul>
+        {questions.map((q) => <li>{q}</li>)}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<style>
+  .pillar {
+    border-left: 3px solid var(--pillar-color);
+    padding: var(--space-xl) 0 var(--space-xl) var(--space-lg);
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--border-gray);
+  }
+
+  .pillar:last-child {
+    border-bottom: none;
+  }
+
+  .pillar__number {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--pillar-color);
+    display: block;
+    margin-bottom: var(--space-xs);
+  }
+
+  .pillar__title {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--deep-navy);
+    margin-top: 0;
+    margin-bottom: var(--space-xs);
+  }
+
+  .pillar__horizon {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-style: italic;
+    color: var(--med-gray);
+  }
+
+  .pillar__body {
+    margin-top: var(--space-lg);
+  }
+
+  .pillar__description {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    color: var(--dark-gray);
+    max-width: none;
+  }
+
+  .pillar__questions {
+    margin-top: var(--space-md);
+  }
+
+  .pillar__questions-label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--med-gray);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    display: block;
+    margin-bottom: var(--space-sm);
+  }
+
+  .pillar__questions ul {
+    list-style: none;
+    padding: 0;
+    padding-left: var(--space-md);
+  }
+
+  .pillar__questions li {
+    font-size: 0.9rem;
+    color: var(--med-gray);
+    font-style: italic;
+    padding-left: 1.5em;
+    position: relative;
+    margin-bottom: var(--space-sm);
+    line-height: 1.65;
+  }
+
+  .pillar__questions li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--pillar-color);
+    font-style: normal;
+  }
+</style>

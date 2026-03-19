@@ -7,9 +7,12 @@
     "dev": "bunx --bun astro dev",
     "build": "bunx --bun astro build",
     "preview": "bunx --bun astro preview",
+    "check": "bunx --bun astro check",
     "astro": "bunx --bun astro"
   },
   "dependencies": {
-    "astro": "^6.0.6"
+    "@astrojs/check": "^0.9.8",
+    "astro": "^6.0.6",
+    "typescript": "^5.9.3"
   }
 }
